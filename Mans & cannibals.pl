@@ -73,7 +73,7 @@ move([CL,ML,right,CR,MR],[CL2,ML,left,CR2,MR]):-
 
 path([CL1,ML1,B1,CR1,MR1],[CL2,ML2,B2,CR2,MR2],Explored,MovesList) :-
    move([CL1,ML1,B1,CR1,MR1],[CL3,ML3,B3,CR3,MR3]),
-   not(member([CL3,ML3,B3,CR3,MR3],Explored)),		% hna bs 3lshan myfdlsh a3d y-call nfs path dh w y-stuck feeh
+   not(member([CL3,ML3,B3,CR3,MR3],Explored)),	
    path([CL3,ML3,B3,CR3,MR3],[CL2,ML2,B2,CR2,MR2],[[CL3,ML3,B3,CR3,MR3]|Explored],[ [[CL3,ML3,B3,CR3,MR3],[CL1,ML1,B1,CR1,MR1]] | MovesList ]).
 
 % Solution exists
